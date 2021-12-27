@@ -1,0 +1,123 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(to bottom, transparent, #1071f8);
+}
+
+::selection {
+  background: var(--primary-red);
+  color: var(--light);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 320px;
+  min-height: 320px;
+  color: var(--text-color);
+  background-color: var(--bg-site);
+  font-family: $rob, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.px-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.py-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.section {
+  &-title {
+    max-width: 613px;
+    position: relative;
+    font-family: $rob900, sans-serif;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--text-dark);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    @include xl {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      height: 2px;
+      width: 41px;
+      background: var(--primary-red);
+    }
+  }
+
+  &-desc {
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--text-color);
+    margin-bottom: 90px;
+
+    @include xl {
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 50px;
+    }
+  }
+}

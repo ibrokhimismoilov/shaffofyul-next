@@ -1,0 +1,113 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  border-radius: 76px;
+  padding: 19px 33px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  border: 2px solid var(--light);
+  font-family: $rob700, sans-serif;
+  color: var(--light);
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+
+  &-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin-top: -2px;
+    }
+
+    &:hover {
+      svg path {
+        fill: var(--primary-green);
+      }
+    }
+  }
+
+  @include xl {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-width: 1px;
+    min-width: 120px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: -80%;
+    z-index: -1;
+    border-radius: 70px;
+    @include transition(0.3s, linear, top);
+    animation: circled 2s linear infinite;
+    background: transparent;
+
+    @include xl {
+      top: -115%;
+      width: 120%;
+      height: 400%;
+      border-radius: 40%;
+      animation: circled 3s linear infinite;
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: var(--light);
+    border-color: var(--light);
+
+    &:hover {
+      // border-color: var(--primary-green);
+      color: var(--primary-green);
+      // background-color: var(--primary-green);
+      &::before {
+        background-color: var(--light);
+      }
+    }
+  }
+
+  &-green {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+
+    &:hover {
+      border-color: var(--primary-green);
+      color: var(--primary-green);
+      background-color: var(--primary-green);
+      &::before {
+        background-color: var(--light);
+      }
+    }
+  }
+
+  &-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & > *:not(:last-child) {
+      margin-right: 20px;
+
+      @include md {
+        margin-right: 0px;
+      }
+    }
+    @include md {
+      margin: -5px -8px;
+      & > * {
+        margin: 5px 8px;
+      }
+    }
+  }
+}

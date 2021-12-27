@@ -1,0 +1,151 @@
+.compare {
+  background: #eef2f8;
+  padding-top: 75px;
+
+  .auto-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &-card {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      @include xl {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      @include lg {
+        flex-direction: column;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #babdc1;
+      }
+
+      .title {
+        font-family: $rob;
+        max-width: 666px;
+        width: 100%;
+        margin-right: 34px;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 1.5;
+
+        @include xl {
+          font-size: 18px;
+          margin-right: 20px;
+          max-width: 50%;
+        }
+
+        @include lg {
+          max-width: 100%;
+          font-size: 16px;
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+
+        @include md {
+          font-size: 14px;
+        }
+      }
+
+      .right {
+        flex: 1;
+        flex-direction: column;
+
+        &__row {
+          display: flex;
+          align-items: center;
+
+          @include xs {
+            flex-direction: column;
+          }
+
+          &-col {
+            position: relative;
+            max-width: calc(50% - 15px);
+            width: 100%;
+            z-index: 1;
+            @include xs {
+              max-width: 100%;
+            }
+            span {
+              z-index: -1;
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              height: 100%;
+              display: block;
+              border-radius: 0 10px 10px 0;
+              transition: all 0.3s linear;
+            }
+          }
+
+          &-left {
+            margin-right: 30px;
+            display: flex;
+            justify-content: flex-end;
+            font-family: $rob700, sans-serif;
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 1.5;
+            color: var(--text-dark);
+
+            @include lg {
+              font-size: 16px;
+            }
+
+            @include md {
+              font-size: 14px;
+            }
+
+            @include xs {
+              margin-right: 0;
+              justify-content: flex-start;
+            }
+          }
+
+          &-right {
+            font-family: $rob700, sans-serif;
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 1.5;
+            color: var(--light);
+            padding: 6px 16px;
+            @include lg {
+              font-size: 16px;
+              padding: 5px 10px;
+            }
+
+            @include md {
+              font-size: 14px;
+            }
+
+            @include xs {
+              margin-bottom: 10px;
+            }
+          }
+
+          &-title {
+            margin-top: 12px;
+            font-family: $rob700, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text-dark);
+            padding: 6px;
+          }
+        }
+      }
+    }
+  }
+}

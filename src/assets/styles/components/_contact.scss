@@ -1,0 +1,170 @@
+.contact {
+  border-top: 10px solid #d1dae8;
+  padding-top: 105px;
+  padding-bottom: 105px;
+  position: relative;
+
+  .main-circle {
+    right: 20%;
+    top: -50px;
+
+    @include xs {
+      display: none;
+    }
+  }
+
+  .section-desc {
+    margin-bottom: 45px;
+
+    @include lg {
+      margin-bottom: 0px;
+    }
+  }
+
+  .auto-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+    max-width: 533px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      margin-top: 30px;
+      max-width: 100%;
+    }
+
+    &-group {
+      display: block;
+      width: 100%;
+      position: relative;
+      margin-bottom: 20px;
+      height: 70px;
+
+      textarea,
+      input {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgba(0, 49, 176, 0.17);
+        background: var(--light);
+        border-radius: 5px;
+        padding-left: 70px;
+        padding-right: 15px;
+        outline: 0;
+        font-family: $rob, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: var(--text-dark);
+        transition: border-color 0.3s linear;
+
+        &:focus {
+          border-color: rgba(1, 72, 255, 0.65);
+        }
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.45);
+        }
+
+        &:placeholder-shown + label {
+          top: 50%;
+          opacity: 0;
+          font-size: 18px;
+          line-height: 21px;
+        }
+      }
+
+      label {
+        top: 20%;
+        font-size: 12px;
+        line-height: 14px;
+        opacity: 1;
+
+        position: absolute;
+        left: 70px;
+        transform: translateY(-50%);
+        transition: all 0.3s linear;
+        opacity: 0.5;
+        color: rgba(0, 0, 0, 0.45);
+
+        &.active {
+          top: 20%;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+
+      &.textarea {
+        height: 256px;
+        textarea {
+          padding: 25px 10px 25px 70px;
+        }
+        label {
+          position: absolute;
+          top: 27px;
+          transform: initial;
+        }
+
+        textarea:focus + label {
+          top: 10px;
+        }
+      }
+    }
+
+    &-icon {
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      left: 14px;
+      top: 14px;
+      background: #f7f7f7;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        z-index: 1;
+      }
+    }
+
+    .btn {
+      margin-left: auto;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+  &__img {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include lg {
+      display: none;
+    }
+
+    &-inner {
+      width: 482px;
+      height: 467px;
+
+      svg,
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+      }
+    }
+  }
+}

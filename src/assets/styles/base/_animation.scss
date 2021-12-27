@@ -1,0 +1,72 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotated {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotatedRect {
+  0% {
+    transform: rotate(0deg) translate(50%, 50%);
+  }
+  25% {
+    transform: rotate(-90deg) translate(50%, 50%);
+  }
+  50% {
+    transform: rotate(-180deg) translate(-50%, -50%);
+  }
+  75% {
+    transform: rotate(-270deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(-360deg) translate(50%, 50%);
+  }
+}
+
+@keyframes circled {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes mainCircleAnim {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+
+@keyframes mainCircleAnimX {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+[data-aos="linear-chart"] {
+  width: 0%;
+  &.aos-animate {
+    width: 100%;
+  }
+}

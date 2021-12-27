@@ -1,0 +1,261 @@
+.main {
+  background: #f8fafe;
+  position: relative;
+  padding-top: 51px;
+  overflow-x: hidden;
+
+  .auto-container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card {
+    &:first-child {
+      margin-top: 100px;
+    }
+    &-wrapper {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &::before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 70%;
+        clip-path: polygon(0 90%, 100% 75%, 100% 100%, 0 100%);
+        background: #eef2f8;
+      }
+    }
+
+    &.active {
+      background: #36cfcf;
+    }
+
+    width: 100%;
+    background: var(--light);
+    box-shadow: 0px 2px 29px rgba(117, 128, 151, 0.06);
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: transform 0.2s linear;
+
+    @include md {
+      flex-wrap: wrap;
+    }
+    &__number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: $rob700, sans-serif;
+      margin-right: 34px;
+
+      @include xl {
+        margin-right: 15px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 1.5;
+        color: var(--light);
+        border-radius: 50%;
+
+        @include xl {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+          line-height: 1;
+        }
+      }
+    }
+
+    &__text {
+      font-size: 21px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: var(--text-dark);
+      padding-right: 40px;
+      border-right: 1px solid rgba(0, 0, 0, 0.16);
+      min-width: 780px;
+      width: 100%;
+      transition: font-weight 0.3s linear !important;
+
+      @include xl {
+        font-size: 18px;
+        padding-right: 20px;
+      }
+
+      @include lg {
+        min-width: 580px;
+      }
+
+      @include md {
+        min-width: initial;
+        width: 100%;
+        padding-right: 0;
+        padding-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.16);
+        border-right: 0;
+        order: 1;
+      }
+    }
+
+    &__price {
+      max-width: 400px;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--text-color);
+      @include transition(0.3s, linear);
+
+      @include md {
+        padding-right: 40px;
+        max-width: calc(100% - 55px);
+        align-items: flex-end;
+      }
+
+      &-inner {
+        @include transition(0.3s, linear);
+        position: relative;
+        font-weight: bold;
+        font-family: $rob700, sans-serif;
+        font-size: 48px;
+        line-height: 1;
+        color: inherit;
+
+        @include xl {
+          font-size: 32px;
+        }
+
+        &::before {
+          content: attr(dataCurrency);
+          position: absolute;
+          left: calc(100% + 14px);
+          top: 0;
+          font-size: 18px;
+          line-height: 1.5;
+          color: var(--text-dark);
+
+          @include xl {
+            margin-top: -3px;
+            padding-left: 5px;
+            font-size: 14px;
+            left: 100%;
+          }
+        }
+      }
+
+      &-year {
+        font-family: $rob, sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+        color: transparent;
+        @include transition(0.3s, linear);
+
+        @include xl {
+          font-size: 13px;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05) !important;
+      box-shadow: 0px 20px 40px rgba(117, 128, 151, 0.15);
+
+      & > .card__text {
+        font-weight: bold;
+      }
+      .card__price-inner {
+        color: var(--primary-red);
+      }
+      .card__price-year {
+        color: var(--text-light);
+      }
+    }
+  }
+
+  &-circle {
+    position: absolute;
+    background: transparent;
+    border-radius: 50%;
+    animation: mainCircleAnim 3s infinite ease-in-out alternate;
+    background: linear-gradient(to bottom, #0776fa, #00c6f1);
+    box-shadow: 0px 22px 38px rgba(53, 55, 100, 0.2);
+
+    &:first-child {
+      right: 7px;
+      top: 10%;
+    }
+
+    &:nth-child(2) {
+      left: 7px;
+      top: 30%;
+    }
+
+    &:nth-child(2) {
+      left: 10%;
+      top: 30%;
+    }
+
+    &:nth-child(3) {
+      right: 10%;
+      top: 60%;
+    }
+
+    &:nth-child(4) {
+      left: -15px;
+      top: 80%;
+    }
+
+    @include md {
+      box-shadow: 0px 11px 19px rgba(53, 55, 100, 0.2);
+    }
+
+    &.sm {
+      width: 40px;
+      height: 40px;
+
+      @include md {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &.lg {
+      width: 98px;
+      height: 98px;
+
+      @include md {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &.anim-x {
+      animation: mainCircleAnimX 3s infinite ease-in-out alternate;
+    }
+
+    &.blur {
+      filter: blur(10px);
+    }
+  }
+}

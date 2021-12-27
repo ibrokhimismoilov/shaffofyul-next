@@ -1,0 +1,34 @@
+.footer {
+  background: linear-gradient(271.04deg, #402dd5 -15.1%, #0776fa 101.2%);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .auto-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 21px;
+    font-variant: small-caps;
+    color: var(--light);
+
+    img {
+      width: 37px;
+      height: 45px;
+      object-fit: contain;
+      object-position: center center;
+    }
+
+    span {
+      margin-left: 26px;
+    }
+  }
+}

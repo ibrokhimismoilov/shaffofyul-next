@@ -1,0 +1,28 @@
+// colors
+:root {
+  --bg-site: #fff;
+  --primary-green: #3be300;
+  --primary-red: #e00051;
+  --light: #fff;
+  --dark: #000000;
+  --text-color: #2f2f2f;
+  --text-dark: var(--dark);
+  --text-light: rgba(0, 0, 0, 0.45);
+}
+
+// sizes
+$xxs: 400px;
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+$xl: 1400px;
+$xxl: 1700px;
+
+// Fonts
+$rob: "Roboto";
+$rob700: "Roboto Bold";
+$rob900: "Roboto Black";
+
+// timing-functions
+$cubic-slow: cubic-bezier(0.7, 0.01, 0.37, 1);
