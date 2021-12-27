@@ -14,31 +14,31 @@ const Contact = () => {
                 <h1 className="section-title">Биз билан богланиш</h1>
                 <p className="section-desc">Республика ва ҳудудий жамгармаларга республика бюджетидан ҳар йили ажратиладиган мақсадли маблаглар</p>
                 <div className="contact__wrapper">
-                    <form className='contact__form'>
+                    <form action='./sendmail.php' method='POST' className='contact__form'>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><User /></div>
-                            <input type="text" placeholder='Исм' />
+                            <input name='name' type="text" placeholder='Исм' />
                             <label>Исм</label>
                         </div>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><Phone /></div>
-                            <input type="text" placeholder='Телефон' />
+                            <input name='phone' type="text" placeholder='Телефон' />
                             <label>Телефон</label>
                         </div>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><Mail /></div>
-                            <input type="text" placeholder='Почта' />
+                            <input name='email' type="text" placeholder='Почта' />
                             <label>Почта</label>
                         </div>
                         <div className="contact__form-group textarea">
                             <div className="contact__form-icon"><Write /></div>
-                            <textarea placeholder='Ҳабар' />
+                            <textarea name='message' placeholder='Ҳабар' />
                             <label>Ҳабар</label>
                         </div>
-                        <button className="btn btn-icon btn-green">
+                        <button type='submit' className="btn btn-icon btn-green">
                             Юбориш
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.75157 17.6485C8.28294 17.1799 8.28294 16.4201 8.75157 15.9515L12.703 12L8.75157 8.04853C8.28294 7.5799 8.28294 6.8201 8.75157 6.35147C9.2202 5.88284 9.98 5.88284 10.4486 6.35147L15.2486 11.1515C15.7173 11.6201 15.7173 12.3799 15.2486 12.8485L10.4486 17.6485C9.98 18.1172 9.2202 18.1172 8.75157 17.6485Z" fill="white" />
+                                <path fillRule="evenodd" clipRule="evenodd" d="M8.75157 17.6485C8.28294 17.1799 8.28294 16.4201 8.75157 15.9515L12.703 12L8.75157 8.04853C8.28294 7.5799 8.28294 6.8201 8.75157 6.35147C9.2202 5.88284 9.98 5.88284 10.4486 6.35147L15.2486 11.1515C15.7173 11.6201 15.7173 12.3799 15.2486 12.8485L10.4486 17.6485C9.98 18.1172 9.2202 18.1172 8.75157 17.6485Z" fill="white" />
                             </svg>
                         </button>
                     </form>
