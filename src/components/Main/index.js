@@ -5,7 +5,7 @@ import Circle from '../Circle';
 
 const Main = () => {
     return (
-        <div className='main'>
+        <div id="cards" className='main'>
             <Circle size="lg" />
             <Circle size="sm" />
             <Circle size="sm" />

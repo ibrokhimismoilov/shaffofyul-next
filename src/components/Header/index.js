@@ -12,14 +12,14 @@ const Header = () => {
                     <div className="header-top__top-logo">
                         <Image src={Logo} placeholder="blurDataURL" />
                     </div>
-                    <div className="header-top__nav">
+                    <a href='#cards' className="header-top__nav">
                         <p className='header-top__nav-text'>Статистика</p>
-                        <div className="header-top__nav-icon">
+                        <div className="header-top__nav-icon" >
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className="header-banner">
