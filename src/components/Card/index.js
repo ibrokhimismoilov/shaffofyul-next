@@ -6,7 +6,8 @@ import 'aos/dist/aos.css';
 const Card = ({ id, text, price, currency, year }) => {
 
     useEffect(() => {
-        AOS.init({ disable: "mobile" })
+        AOS.init()
+        // AOS.init({ disable: "mobile" })
     }, [])
 
     const bg = { backgroundColor: COLORS[Math.floor(Math.random() * COLORS.length)].toString() };

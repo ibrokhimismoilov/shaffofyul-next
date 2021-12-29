@@ -7,7 +7,6 @@ const CompareCard = ({ id, title, right }) => {
             <div className="right">
                 {
                     right.map(item => {
-                        console.log(item);
                         return (
                             <div key={item.id} className="right__row">
                                 {

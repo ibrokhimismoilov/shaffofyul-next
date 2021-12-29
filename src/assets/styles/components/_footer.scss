@@ -5,10 +5,20 @@
   align-items: center;
   justify-content: center;
 
+  @include sm {
+    height: initial;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
   .auto-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &__logo {
@@ -19,15 +29,24 @@
     line-height: 21px;
     font-variant: small-caps;
     color: var(--light);
-
+    @include sm {
+      margin-bottom: 10px;
+    }
     img {
       width: 37px;
       height: 45px;
       object-fit: contain;
       object-position: center center;
+
+      @include sm {
+        width: 27px;
+        height: 15px;
+      }
     }
 
     span {
+      height: initial;
+      width: inherit;
       margin-left: 26px;
     }
   }

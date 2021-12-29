@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Circle from '../Circle';
 import FooterImg from './icons/FooterImg';
 import Mail from './icons/Mail';
 import Phone from './icons/Phone';
 import User from './icons/User';
 import Write from './icons/Write';
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
+    const { register, handleSubmit } = useForm();
+
+    const submithandler = () => {
+        console.log(register);
+    }
+
     return (
         <div className='contact' id='contact'>
             <Circle isBlur={true} anim="anim-x" />
@@ -14,25 +21,25 @@ const Contact = () => {
                 <h1 className="section-title">Биз билан богланиш</h1>
                 <p className="section-desc">Республика ва ҳудудий жамгармаларга республика бюджетидан ҳар йили ажратиладиган мақсадли маблаглар</p>
                 <div className="contact__wrapper">
-                    <form action='./sendmail.php' method='POST' className='contact__form'>
+                    <form onSubmit={handleSubmit(submithandler)} className='contact__form'>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><User /></div>
-                            <input name='name' type="text" placeholder='Исм' />
+                            <input {...register("name", { required: true })} placeholder='Исм' />
                             <label>Исм</label>
                         </div>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><Phone /></div>
-                            <input name='phone' type="text" placeholder='Телефон' />
+                            <input {...register("phone", { required: true })} placeholder='Телефон' />
                             <label>Телефон</label>
                         </div>
                         <div className="contact__form-group">
                             <div className="contact__form-icon"><Mail /></div>
-                            <input name='email' type="text" placeholder='Почта' />
+                            <input {...register("email", { required: true })} placeholder='Почта' />
                             <label>Почта</label>
                         </div>
                         <div className="contact__form-group textarea">
                             <div className="contact__form-icon"><Write /></div>
-                            <textarea name='message' placeholder='Ҳабар' />
+                            <textarea {...register("message", { required: true })} placeholder='Ҳабар' />
                             <label>Ҳабар</label>
                         </div>
                         <button type='submit' className="btn btn-icon btn-green">

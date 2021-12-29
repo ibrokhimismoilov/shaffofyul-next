@@ -4,7 +4,7 @@ $name = trim($_POST['name']);
 $email = trim($_POST['email']);
 $phone = trim($_POST['phone']);
 $message = trim($_POST['message']);
-$subject = 'Contact Us From ilmr.uz';
+$subject = 'Contact Us From Shaffofyul.uz';
 
 // Email address validation - works with php 5.2+
 function is_email_valid($email) {
@@ -21,7 +21,7 @@ if( isset($name) && isset($email) && isset($phone) && isset($message) && is_emai
   }
 
   // Email will be send
-  $to = "x.mirsharipov@gmail.com"; // Change with your email address
+  $to = "mr017programmer@gmail.com"; // Change with your email address
   $sub = $subject; // You can define email subject
   // HTML Elements for Email Body
   $body = <<<EOD
@@ -40,7 +40,7 @@ EOD;
   mail($to, $sub, $body, $headers);
 }
 
-header('location: http://shaffofyol.uz');
+header('location: http://shaffofyul.uz');
 
 
 ?>
