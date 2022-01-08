@@ -14,7 +14,6 @@ const Footer = () => {
                 <div className="footer__logo">
                     <Image src={OKS} placeholder="blurDataURL" />
                 </div>
-
             </div>
         </footer>
     )
