@@ -2,7 +2,7 @@ import React from 'react';
 import Image from "next/image";
 import Logo from "../../assets/images/svg/header-logo.svg";
 import Banner from "../../assets/images/svg/banner.svg";
-import Rectangle from "../../assets/images/svg/banner-rectangle.svg";
+import Rectangle from "../../assets/images/png/rectangle.png";
 
 const Header = () => {
     return (
@@ -38,12 +38,33 @@ const Header = () => {
                                 <Image src={Rectangle} />
                             </span>
                         </div>
-                        {/* <div className="header-banner__img-bg">
+                        <div className="header-banner__img-bg">
                             <span className='rectangle'>
                                 <Image src={Rectangle} />
                             </span>
-                        </div> */}
+                        </div>
 
+                        <div className="header-banner__img-bg">
+                            <span className='rectangle'>
+                                <Image src={Rectangle} />
+                            </span>
+                        </div>
+                        <div className="header-banner__img-bg">
+                            <span className='rectangle'>
+                                <Image src={Rectangle} />
+                            </span>
+                        </div>
+
+                        <div className="header-banner__img-bg">
+                            <span className='rectangle'>
+                                <Image src={Rectangle} />
+                            </span>
+                        </div>
+                        <div className="header-banner__img-bg">
+                            <span className='rectangle'>
+                                <Image src={Rectangle} />
+                            </span>
+                        </div>
                         <Image src={Banner} />
                     </div>
                 </div>

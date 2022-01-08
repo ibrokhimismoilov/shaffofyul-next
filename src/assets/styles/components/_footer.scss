@@ -1,5 +1,6 @@
 .footer {
-  background: linear-gradient(271.04deg, #402dd5 -15.1%, #0776fa 101.2%);
+  background: #2a1e48;
+  // background: linear-gradient(271.04deg, #402dd5 -15.1%, #0776fa 101.2%);
   height: 80px;
   display: flex;
   align-items: center;
@@ -29,9 +30,11 @@
     line-height: 21px;
     font-variant: small-caps;
     color: var(--light);
+
     @include sm {
       margin-bottom: 10px;
     }
+
     img {
       width: 37px;
       height: 45px;

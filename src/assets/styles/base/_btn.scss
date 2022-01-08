@@ -32,7 +32,7 @@
     }
   }
 
-  @include xl {
+  @include lg {
     font-size: 14px;
     padding: 10px 20px;
     border-width: 1px;
@@ -46,11 +46,11 @@
     width: 200px;
     height: 200px;
     left: 50%;
-    top: -80%;
+    top: -95%;
     z-index: -1;
     border-radius: 70px;
-    @include transition(0.3s, linear, top);
-    animation: circled 2s linear infinite;
+    @include transition(0.7s);
+    animation: circled 2.2s linear infinite;
     background: transparent;
 
     @include xl {
